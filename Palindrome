@@ -17,7 +17,7 @@
     </style>
     <script>
         function isPal(){
-            let Word = document.getElementById("inputWord").value;
+            let Word = document.getElementById("inputWord").value.toLowerCase();
 
             if(Word === ""){
                 document.getElementById("answer").innerHTML = "Please enter a word";
