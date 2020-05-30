@@ -1,9 +1,10 @@
-        function findFib(){
-            inputNum = parseInt(document.getElementById("inputWordFib").value);
-            fib =[0, 1, 1];
-            for(let b = 0; b <= inputNum; b++){
-                fib.push(fib[b+1] + fib[b+2]);
-            }
-            document.getElementById("answer3").innerHTML = fib[inputNum - 1];
-
-        }
+const findFib = () => {
+   const inputNum = parseInt(document.getElementById("inputWordFib").value);
+   fib =[0, 1];
+   for(let b = 2; b <= inputNum; b++){
+      const num1 = fib[b-1];
+      const num2 = fib[b-2];
+      fib.push(num1 + num2);
+   }
+   document.getElementById("answer3").innerHTML = fib[inputNum-1];
+}
